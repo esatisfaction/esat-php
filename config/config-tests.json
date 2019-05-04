@@ -1,0 +1,9 @@
+{
+    "name": "config-default",
+    "type": "configuration",
+    "environment": "default",
+    "api": {
+        "version": "",
+        "base_uri": ""
+    }
+}

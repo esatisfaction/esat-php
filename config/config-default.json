@@ -1,0 +1,9 @@
+{
+    "name": "config-default",
+    "type": "configuration",
+    "environment": "default",
+    "api": {
+        "version": "3.1",
+        "base_uri": "https://api.e-satisfaction.com"
+    }
+}
