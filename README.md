@@ -53,7 +53,7 @@ If you install manually, you'll want to make sure that these extensions are avai
 
 To start working with the SDK, you have to initialize the following:
 
-* Setup the working environment in the main Esat Registry
+* Setup the main Esat Registry
 * Set the Authorization Scheme to be used by each service's HttpClient
 
 Example:
