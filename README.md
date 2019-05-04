@@ -61,13 +61,14 @@ Example:
 ```php
 use \Esat\Esat;
 use \Esat\Auth\TokenAuthProvider;
+use \Esat\Http\AuthClient;
 use \Esat\Services\Questionnaires\Questionnaire;
 use \Monolog\Logger;
 
 // Initialize main Esatisfaction and Authentication
 $esat = new Esat();
 $tokenAuthProvider = new TokenAuthProvider('YOUR_TOKEN');
-$httpClient = new AuthProviderInterface($tokenAuthProvider);
+$httpClient = new AuthClient($tokenAuthProvider);
 
 // Create Questionnaire Service
 $questionnaire = new Questionnaire($esat, new Logger(), $httpClient);
