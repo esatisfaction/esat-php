@@ -108,6 +108,21 @@ class Questionnaire extends BaseModel
     protected $updated_by;
 
     /**
+     * @var string
+     */
+    protected $collection_url;
+
+    /**
+     * @var string
+     */
+    protected $collection_url_short;
+
+    /**
+     * @var string
+     */
+    protected $collection_url_long;
+
+    /**
      * @return string
      */
     public function getInstanceId()
@@ -575,6 +590,66 @@ class Questionnaire extends BaseModel
     public function setUpdatedBy(string $updated_by)
     {
         $this->updated_by = $updated_by;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCollectionUrl()
+    {
+        return $this->collection_url;
+    }
+
+    /**
+     * @param string $collection_url
+     *
+     * @return $this
+     */
+    public function setCollectionUrl(string $collection_url)
+    {
+        $this->collection_url = $collection_url;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCollectionUrlShort()
+    {
+        return $this->collection_url_short;
+    }
+
+    /**
+     * @param string $collection_url_short
+     *
+     * @return $this
+     */
+    public function setCollectionUrlShort(string $collection_url_short)
+    {
+        $this->collection_url_short = $collection_url_short;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCollectionUrlLong()
+    {
+        return $this->collection_url_long;
+    }
+
+    /**
+     * @param string $collection_url_long
+     *
+     * @return $this
+     */
+    public function setCollectionUrlLong(string $collection_url_long)
+    {
+        $this->collection_url_long = $collection_url_long;
 
         return $this;
     }
