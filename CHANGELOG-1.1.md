@@ -9,3 +9,4 @@ XXX is the change hash
 
 * 1.1.0
   * Use working-domain header for authentication
+  * Update API version to v3.2
