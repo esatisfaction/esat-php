@@ -65,7 +65,7 @@ use \Esat\Http\AuthClient;
 use \Monolog\Logger;
 
 // Initialize Authentication
-$tokenAuthProvider = new TokenAuthProvider('YOUR_TOKEN');
+$tokenAuthProvider = new TokenAuthProvider('YOUR_TOKEN', 'YOUR_DOMAIN');
 $httpClient = new AuthClient($tokenAuthProvider);
 
 // Initialize main Esatisfaction Registry
