@@ -27,13 +27,20 @@ class TokenAuthProvider implements AuthProviderInterface
     private $token;
 
     /**
+     * @var string
+     */
+    private $domain;
+
+    /**
      * TokenAuthProvider constructor.
      *
-     * @param $token
+     * @param string $token
+     * @param string $domain
      */
-    public function __construct($token)
+    public function __construct($token, $domain)
     {
         $this->token = $token;
+        $this->domain = $domain;
     }
 
     /**
@@ -45,7 +52,10 @@ class TokenAuthProvider implements AuthProviderInterface
     public function setRequestAuth(RequestInterface &$request)
     {
         // Set request headers
-        return $request = $request->withHeader('esat-auth', $this->getToken());
+        $request = $request->withHeader('esat-domain', $this->getDomain());
+        $request = $request->withHeader('esat-auth', $this->getToken());
+
+        return $request;
     }
 
     /**
@@ -64,6 +74,26 @@ class TokenAuthProvider implements AuthProviderInterface
     public function setToken(string $token)
     {
         $this->token = $token;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDomain()
+    {
+        return $this->domain;
+    }
+
+    /**
+     * @param string $domain
+     *
+     * @return $this
+     */
+    public function setDomain(string $domain)
+    {
+        $this->domain = $domain;
 
         return $this;
     }
